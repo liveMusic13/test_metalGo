@@ -1,0 +1,25 @@
+@use '@st/functions' as func;
+@use '@st/mixins' as mix;
+
+.wrapper_content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: calc(100vh - #{func.adapt(50px, 1920px)});
+}
+
+.completed {
+	height: 95%;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	gap: func.adapt(24px, 1920px);
+
+	@include mix.hidden_scroll();
+
+	> h2 {
+		text-align: center;
+		font-weight: 600;
+		font-size: 1.2rem;
+	}
+}

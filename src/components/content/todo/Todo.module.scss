@@ -1,0 +1,41 @@
+@use '@st/functions' as func;
+@use '@st/variables' as vars;
+
+.block__todo {
+	padding: func.adapt(10px, 1920px);
+	border-radius: func.adapt(16px, 1920px);
+	background-color: vars.$orange_light;
+	max-width: func.adapt(700px, 1920px);
+
+	&:hover {
+		border: 1px solid vars.$brown;
+	}
+
+	> h2 {
+		font-size: 1rem;
+		font-weight: 500;
+	}
+}
+
+.block__buttons {
+	margin-top: func.adapt(16px, 1920px);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	> button {
+		background-color: transparent;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
+
+.completed {
+	color: vars.$green;
+}
+
+.not__completed {
+	color: vars.$brown;
+}

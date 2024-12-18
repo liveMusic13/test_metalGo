@@ -1,0 +1,15 @@
+@use '@st/functions' as func;
+
+.header {
+	height: func.adapt(50px, 1920px);
+
+	> a {
+		background-color: transparent;
+		font-size: 1.2rem;
+		font-weight: 700;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}

@@ -1,0 +1,33 @@
+@use '@st/functions' as func;
+@use '@st/variables' as vars;
+@use '@st/mixins' as mix;
+
+.block__allTodo {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 85%;
+	width: func.adapt(1550px, 1920px);
+	padding: func.adapt(24px, 1920px);
+	overflow: auto;
+	box-shadow: 0 0 10px rgba($color: vars.$black, $alpha: 0.8);
+	border-radius: func.adapt(24px, 1920px);
+
+	@include mix.hidden_scroll();
+}
+
+.completed {
+	height: 95%;
+	overflow-y: auto;
+	display: flex;
+	flex-direction: column;
+	gap: func.adapt(24px, 1920px);
+
+	@include mix.hidden_scroll();
+
+	> h2 {
+		text-align: center;
+		font-weight: 600;
+		font-size: 1.2rem;
+	}
+}

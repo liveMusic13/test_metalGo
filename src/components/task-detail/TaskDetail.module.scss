@@ -1,0 +1,45 @@
+@use '@st/functions' as func;
+@use '@st/variables' as vars;
+@use '@st/mixins' as mix;
+
+.block__taskDetail {
+	height: 85%;
+	width: func.adapt(1050px, 1920px);
+	padding: func.adapt(24px, 1920px);
+	overflow: auto;
+	box-shadow: 0 0 10px rgba($color: vars.$black, $alpha: 0.8);
+	border-radius: func.adapt(24px, 1920px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: func.adapt(24px, 1920px);
+
+	@include mix.hidden_scroll();
+}
+
+.id {
+	background-color: vars.$brown;
+	padding: func.adapt(16px, 1920px);
+	border-radius: func.adapt(16px, 1920px);
+}
+
+.title {
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.active {
+	color: vars.$green;
+}
+
+.no_active {
+	color: vars.$brown;
+}
+
+.button {
+	background-color: transparent;
+
+	&:hover {
+		cursor: pointer;
+	}
+}

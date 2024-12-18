@@ -1,0 +1,24 @@
+@use '@st/functions' as func;
+@use '@st/variables' as vars;
+
+.formAdd {
+	display: flex;
+	align-items: center;
+	gap: func.adapt(50px, 1920px);
+
+	> input {
+		padding: func.adapt(10px, 1920px) func.adapt(15px, 1920px);
+		outline: none;
+		background-color: vars.$orange_light;
+		border: 1px solid vars.$brown;
+		border-radius: func.adapt(10px, 1920px);
+	}
+
+	> button {
+		background-color: transparent;
+
+		&:hover {
+			cursor: pointer;
+		}
+	}
+}
